@@ -1,0 +1,33 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.texte-survol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.image-container:hover img {
+  opacity: 0.5; /* rend l’image un peu transparente */
+}
+
+.image-container:hover .texte-survol {
+  opacity: 1; /* fait apparaître le texte */
+}
+
+
